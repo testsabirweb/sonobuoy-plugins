@@ -25,8 +25,8 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build systemd-logs image (amd64)
-        run: cd systemd-logs && make build-container ARCH=amd64
+      - name: Build systemd-logs image
+        run: cd systemd-logs && make build-container
 
       - name: Save image to tar
         run: |
